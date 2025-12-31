@@ -27,10 +27,10 @@ export default function Projects() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5 max-w-4xl">
           {projects.map((project: any, index: number) => (
             <motion.div
-              key={project.id}
+                key={project.id}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className="group"
             >
@@ -47,7 +47,7 @@ export default function Projects() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                         priority={project.id === 1}
-                      />
+                />
                       {/* Glass overlay for image */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
                       {/* Frosted glass effect at bottom of image */}
@@ -65,7 +65,7 @@ export default function Projects() {
                     <span className="px-2 py-1 text-xs font-medium bg-white/20 dark:bg-black/30 backdrop-blur-md rounded-md border border-white/30 dark:border-white/10">
                       {project.category}
                     </span>
-                  </div>
+                    </div>
                   
                   {project.liveUrl ? (
                     <a
@@ -86,16 +86,16 @@ export default function Projects() {
                       <Github className="w-4 h-4" />
                     </a>
                   )}
-                </div>
+                  </div>
 
                        {/* Content Section with glass effect */}
                        <div className="p-3 sm:p-4 flex-grow bg-gradient-to-b from-transparent to-white/5 dark:to-black/5">
                          <h3 className="text-sm sm:text-base font-bold mb-1.5 sm:mb-2 text-white group-hover:text-white/80 transition-colors">
-                           {project.title}
-                         </h3>
+                    {project.title}
+                  </h3>
                          <p className="text-xs sm:text-sm text-white/70 mb-2 sm:mb-3 line-clamp-3">
-                           {project.description}
-                         </p>
+                    {project.description}
+                  </p>
                   
                   {/* Skills with glass effect */}
                   <div className="flex flex-wrap gap-1.5 mb-3">
@@ -105,7 +105,7 @@ export default function Projects() {
                         className="px-1.5 py-0.5 text-xs bg-white/15 dark:bg-black/25 backdrop-blur-sm rounded border border-white/20 dark:border-white/10 text-white/80"
                       >
                         {skill}
-                      </span>
+                  </span>
                     ))}
                   </div>
                 </div>

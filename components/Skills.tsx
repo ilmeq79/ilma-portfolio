@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Skills() {
   const { t } = useLanguage();
-  
+
   const skills = [
     // Frontend
     "React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion",
@@ -24,24 +24,24 @@ export default function Skills() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-2 text-white">
             {t.skills.title}
           </h2>
-        </div>
+                  </div>
 
         {/* Minimal Card */}
         <div className="bg-background rounded-xl border border-border p-6">
           <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (
               <motion.span
-                key={skill}
+                        key={skill}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
+                        viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 className="px-4 py-2 bg-muted rounded-full text-sm hover:bg-muted/80 transition-colors"
-              >
-                {skill}
+                      >
+                        {skill}
               </motion.span>
-            ))}
-          </div>
+                    ))}
+                </div>
         </div>
       </div>
     </section>

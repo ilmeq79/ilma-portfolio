@@ -176,14 +176,14 @@ export default function Timeline() {
                 </div>
 
         {/* Content Card with smooth animations */}
-        <div
+                <div
           className={`relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border transition-all duration-500 ease-out group-hover/timeline-item:shadow-2xl group-hover/timeline-item:-translate-y-1 ${
             isActive
               ? "border-white/40 bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl shadow-2xl shadow-white/20 translate-y-0"
               : "border-white/15 bg-gradient-to-br from-white/8 to-transparent backdrop-blur-lg shadow-xl shadow-white/10 opacity-90 hover:opacity-100"
           } hover:border-white/50 hover:bg-gradient-to-br hover:from-white/20 hover:to-white/10`}
           style={{ maxWidth: 'calc((56rem - 1.25rem) / 2)' }}
-        >
+                >
           {/* Subtle Glow effect on active */}
           {isActive && (
             <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-white/10 via-white/5 to-amber-500/5 blur-sm -z-10" />
@@ -204,9 +204,12 @@ export default function Timeline() {
                     <div className="absolute inset-0 bg-gradient-to-r from-white/30 to-amber-400/20 blur-lg opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500" />
                     <div className="relative w-full h-full rounded-xl bg-background/90 backdrop-blur-sm overflow-hidden">
                       {item.thumbnail.startsWith('http') ? (
-                        <img
+                        <Image
                           src={item.thumbnail}
                           alt={item.company}
+                          width={56}
+                          height={56}
+                          unoptimized
                           className="w-full h-full object-cover transition-transform duration-500 group-hover/logo:scale-110"
                         />
                       ) : (
@@ -268,7 +271,7 @@ export default function Timeline() {
                {item.description && (
                  <p className="text-white/70 mb-4 sm:mb-5 md:mb-6 leading-relaxed transition-all duration-500 text-sm sm:text-base">
                    {item.description}
-                 </p>
+                    </p>
                )}
 
           {/* Achievements */}
@@ -277,7 +280,7 @@ export default function Timeline() {
               <p className="text-sm sm:text-base font-semibold text-white/85 flex items-center gap-2 sm:gap-2.5">
                 <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-gradient-to-r from-white/80 to-amber-400/60 animate-pulse" />
                 {t.experience.keyAchievements}
-              </p>
+                      </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3 md:gap-3.5">
                 {item.achievements.map((achievement: string, i: number) => (
                   <li

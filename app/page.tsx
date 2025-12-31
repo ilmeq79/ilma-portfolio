@@ -21,14 +21,14 @@ export default function Home() {
         <div className="fixed top-6 right-6 sm:right-8 lg:right-12 z-50">
           <LanguageSwitcher />
         </div>
-        <Hero />
-        <BentoGrid />
-        <Timeline />
-        <Skills />
+      <Hero />
+      <BentoGrid />
+      <Timeline />
+      <Skills />
         <Certificates />
-        <Contact />
+      <Contact />
         <ScrollToTop />
-      </main>
+    </main>
     </>
   );
 }

@@ -50,3 +50,4 @@ image: "/your-image-name.jpg", // Change this to match your file
 - Example: `public/bazeni-kaukovic.jpg` → accessible at `/bazeni-kaukovic.jpg`
 - The Next.js Image component will automatically optimize the image
 
+

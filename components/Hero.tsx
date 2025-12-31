@@ -28,7 +28,7 @@ export default function Hero() {
       className="min-h-screen flex items-center px-6 sm:px-8 lg:px-12 pt-16 sm:pt-20 relative overflow-hidden"
     >
       {/* Content - Moves with parallax over fixed Spline background */}
-      <motion.div
+        <motion.div
         style={{ y: textY, opacity }}
         className="max-w-4xl w-full relative z-10"
       >
@@ -92,8 +92,8 @@ export default function Hero() {
             >
               <Mail className="w-5 h-5 text-black" />
             </a>
-          </motion.div>
-        </div>
+        </motion.div>
+      </div>
       </motion.div>
     </section>
   );

@@ -133,7 +133,7 @@ export default function Contact() {
     e.preventDefault();
     if (currentStep === totalSteps) {
       if (validateStep(currentStep)) {
-    setIsSubmitting(true);
+        setIsSubmitting(true);
         try {
           // Send email to API route
           const response = await fetch('/api/send-email', {
@@ -284,7 +284,7 @@ export default function Contact() {
 
         {/* Success Message (shown after form submission) */}
         {showSuccess && (
-        <motion.div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -296,7 +296,7 @@ export default function Contact() {
               </div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
                 {(t.contact as any).successTitle || 'Thank You!'}
-          </h2>
+              </h2>
               <p className="text-lg md:text-xl text-white/90 max-w-md mx-auto leading-relaxed">
                 {(t.contact as any).successMessage || 'Thank you for your message! We will get back to you within 24 hours.'}
               </p>
@@ -307,7 +307,7 @@ export default function Contact() {
             >
               {(t.contact as any).close || 'Close'}
             </button>
-        </motion.div>
+          </motion.div>
         )}
 
         {/* Form (shown after START) */}
@@ -349,7 +349,7 @@ export default function Contact() {
               <div className="space-y-6">
               <div>
                   <label className="block text-lg md:text-xl font-medium text-foreground mb-4">
-                    What's your name? <span className="text-foreground/40">*</span>
+                    What&apos;s your name? <span className="text-foreground/40">*</span>
                 </label>
                 <input
                   type="text"
@@ -380,7 +380,7 @@ export default function Contact() {
               <div className="space-y-6">
               <div>
                   <label className="block text-lg md:text-xl font-medium text-foreground mb-4">
-                    What's your email? <span className="text-foreground/40">*</span>
+                    What&apos;s your email? <span className="text-foreground/40">*</span>
                 </label>
                 <input
                   type="email"
@@ -421,7 +421,7 @@ export default function Contact() {
               <div className="space-y-6">
               <div>
                   <label className="block text-lg md:text-xl font-medium text-foreground mb-4">
-                    What's your message? <span className="text-foreground/40">*</span>
+                    What&apos;s your message? <span className="text-foreground/40">*</span>
                 </label>
                 <textarea
                   value={formData.message}
